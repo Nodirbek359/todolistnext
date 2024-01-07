@@ -1,7 +1,8 @@
-import { Alata } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
-
-const disp = Alata({ subsets: ["latin"], weight: "400" });
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+const desp = Montserrat({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: "Todo nextjs",
@@ -11,7 +12,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={disp.className}>{children}</body>
+      <body className={desp.className}>
+        <Navbar/>
+        <main className="max-container ">{children}</main>
+        <Footer/>
+      </body>
     </html>
   );
 }

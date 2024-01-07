@@ -5,7 +5,10 @@
 
 @layer components {
     .max-container {
-      max-width: 730px;
+      max-width: 1000px;
       @apply px-5 mx-auto w-full 
+    }
+    body{
+      background-color: rgb(111, 105, 26);
     }
   }
